@@ -74,6 +74,10 @@ def report(
         "EDA-отчёт",
         help="Заголовок отчёта (Markdown).",
     ),
+    top_k_categories: int = typer.Option(
+        5,
+        help="Сколько top-значений сохранять для категориальных признаков.",
+    ),
 ) -> None:
     """
     Сгенерировать полный EDA-отчёт:
@@ -93,7 +97,8 @@ def report(
     summary_df = flatten_summary_for_print(summary)
     missing_df = missing_table(df)
     corr_df = correlation_matrix(df)
-    top_cats = top_categories(df)
+    # HW03 2.3.2: использование новой CLI-опции --top-k-categories
+    top_cats = top_categories(df, top_k=top_k_categories)
 
     # 2. Качество в целом
     quality_flags = compute_quality_flags(summary, missing_df)
@@ -147,6 +152,8 @@ def report(
         if not top_cats:
             f.write("Категориальные/строковые признаки не найдены.\n\n")
         else:
+            # HW03 2.3.2: отражение новой CLI-опции --top-k-categories в отчёте
+            f.write(f"Показаны top-{top_k_categories} значений для категориальных признаков.\n")
             f.write("См. файлы в папке `top_categories/`.\n\n")
 
         f.write("## Гистограммы числовых колонок\n\n")
