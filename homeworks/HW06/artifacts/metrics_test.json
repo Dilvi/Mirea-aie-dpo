@@ -1,0 +1,23 @@
+{
+  "accuracy":{
+    "Dummy":0.7375,
+    "LogReg":0.8119444444,
+    "DecisionTree":0.8383333333,
+    "RandomForest":0.8905555556,
+    "GradientBoosting":0.8688888889
+  },
+  "f1":{
+    "Dummy":0.0,
+    "LogReg":0.5606748864,
+    "DecisionTree":0.6576470588,
+    "RandomForest":0.7555831266,
+    "GradientBoosting":0.70755886
+  },
+  "roc_auc":{
+    "Dummy":0.5,
+    "LogReg":0.7976914876,
+    "DecisionTree":0.8371031995,
+    "RandomForest":0.9261519146,
+    "GradientBoosting":0.8961635728
+  }
+}

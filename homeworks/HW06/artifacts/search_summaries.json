@@ -1,0 +1,21 @@
+{
+  "DecisionTree": {
+    "best_params": {
+      "max_depth": 10,
+      "min_samples_leaf": 10
+    },
+    "best_cv_score": 0.8289624724042927,
+    "scoring": "roc_auc",
+    "cv": 5
+  },
+  "RandomForest": {
+    "best_params": {
+      "max_depth": null,
+      "min_samples_leaf": 1,
+      "n_estimators": 100
+    },
+    "best_cv_score": 0.9264779163752873,
+    "scoring": "roc_auc",
+    "cv": 5
+  }
+}
