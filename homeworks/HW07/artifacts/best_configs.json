@@ -1,0 +1,24 @@
+{
+  "ds1": {
+    "selected_algo": "kmeans",
+    "selected_params": {
+      "k": 2
+    },
+    "selection_criterion": "max_silhouette (DBSCAN метрики считались по non-noise)"
+  },
+  "ds2": {
+    "selected_algo": "kmeans",
+    "selected_params": {
+      "k": 2
+    },
+    "selection_criterion": "max_silhouette (DBSCAN метрики считались по non-noise)"
+  },
+  "ds3": {
+    "selected_algo": "dbscan",
+    "selected_params": {
+      "eps": 1.0,
+      "min_samples": 5
+    },
+    "selection_criterion": "max_silhouette (DBSCAN метрики считались по non-noise)"
+  }
+}
