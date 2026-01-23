@@ -1,5 +1,7 @@
 {
+  "best_model": "RandomForest",
   "best_model_name": "RandomForest",
+  "selection_metric": "roc_auc",
   "test_metrics": {
     "accuracy": 0.8905555555555555,
     "f1": 0.7555831265508685,

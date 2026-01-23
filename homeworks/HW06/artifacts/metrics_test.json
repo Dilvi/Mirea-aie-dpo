@@ -1,23 +1,28 @@
 {
-  "accuracy":{
-    "Dummy":0.7375,
-    "LogReg":0.8119444444,
-    "DecisionTree":0.8383333333,
-    "RandomForest":0.8905555556,
-    "GradientBoosting":0.8688888889
+  "Dummy": {
+    "accuracy": 0.7375,
+    "f1": 0.0,
+    "roc_auc": 0.5
   },
-  "f1":{
-    "Dummy":0.0,
-    "LogReg":0.5606748864,
-    "DecisionTree":0.6576470588,
-    "RandomForest":0.7555831266,
-    "GradientBoosting":0.70755886
+  "LogisticRegression": {
+    "accuracy": 0.8119444444444445,
+    "f1": 0.5606748864373783,
+    "roc_auc": 0.7976914875596609
   },
-  "roc_auc":{
-    "Dummy":0.5,
-    "LogReg":0.7976914876,
-    "DecisionTree":0.8371031995,
-    "RandomForest":0.9261519146,
-    "GradientBoosting":0.8961635728
+  "DecisionTree": {
+    "accuracy": 0.8383333333333334,
+    "f1": 0.6576470588235294,
+    "roc_auc": 0.8371031995137457
+  },
+  "RandomForest": {
+    "accuracy": 0.8905555555555555,
+    "f1": 0.7555831265508685,
+    "roc_auc": 0.9261519146264909
+  },
+  "Boosting": {
+    "accuracy": 0.8688888888888889,
+    "f1": 0.7075588599752168,
+    "roc_auc": 0.8961635727737424,
+    "impl": "GradientBoostingClassifier"
   }
 }

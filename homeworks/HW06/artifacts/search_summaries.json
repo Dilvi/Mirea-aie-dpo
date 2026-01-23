@@ -6,7 +6,11 @@
     },
     "best_cv_score": 0.8289624724042927,
     "scoring": "roc_auc",
-    "cv": 5
+    "cv": 5,
+    "complexity_controls": [
+      "max_depth",
+      "min_samples_leaf"
+    ]
   },
   "RandomForest": {
     "best_params": {
