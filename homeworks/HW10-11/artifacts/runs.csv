@@ -1,0 +1,7 @@
+experiment_id,task,dataset,seed,model_summary,optimizer,lr,epochs_trained,best_val_accuracy,test_accuracy,precision,recall,mean_iou,notes
+C1,classification,STL10,42,SimpleCNN without augmentations,Adam,0.001,8,0.573,,,,,simple-cnn-base
+C2,classification,STL10,42,SimpleCNN with augmentations,Adam,0.001,8,0.525,,,,,simple-cnn-aug
+C3,classification,STL10,42,"ResNet18 pretrained, head-only training",Adam,0.001,6,0.927,,,,,resnet18-head-only
+C4,classification,STL10,42,"ResNet18 pretrained, partial fine-tuning (layer4 + fc)",Adam,0.0001,6,0.947,0.94875,,,,resnet18-finetune-layer4+fc
+V1,segmentation,Pascal VOC 2012,42,"DeepLabV3_ResNet50 pretrained, foreground=person, threshold=0.5",,,0,,,0.2540352190636588,0.2326175634909063,0.2160835498441981,"Segmentation track, V1 basic postprocessing"
+V2,segmentation,Pascal VOC 2012,42,"DeepLabV3_ResNet50 pretrained, foreground=person, threshold=0.7",,,0,,,0.25902590475389325,0.20641185494949063,0.1994627712411334,"Segmentation track, V2 alternative threshold postprocessing"

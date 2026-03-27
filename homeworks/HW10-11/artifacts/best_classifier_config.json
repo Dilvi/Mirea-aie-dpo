@@ -1,0 +1,17 @@
+{
+  "dataset": "STL10",
+  "seed": 42,
+  "best_experiment_id": "C4",
+  "model_summary": "ResNet18 pretrained, partial fine-tuning (layer4 + fc)",
+  "optimizer": "Adam",
+  "lr": 0.0001,
+  "epochs_trained": 6,
+  "best_val_accuracy": 0.947,
+  "test_accuracy": 0.94875,
+  "batch_size": 64,
+  "transforms": {
+    "C1": "Resize(96,96) -> ToTensor -> Normalize",
+    "C2": "Resize -> RandomHorizontalFlip -> RandomCrop(padding=8) -> ColorJitter -> ToTensor -> Normalize",
+    "C3/C4": "ResNet18 pretrained weights transforms()"
+  }
+}
