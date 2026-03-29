@@ -1,0 +1,5 @@
+experiment_id,task,dataset,seed,split_summary,window_size,horizon,model_summary,features_summary,scaler,optimizer,lr,epochs_trained,best_val_mae,best_val_rmse,best_val_mape,test_mae,test_rmse,test_mape,notes
+B1,forecasting,S12-hw-dataset.csv,42,70/15/15 temporal split,,1,naive-last,last observed value,no,,,,6.4434055727554185,8.20353204909296,4.394593960122376,,,,Validation only
+B2,forecasting,S12-hw-dataset.csv,42,70/15/15 temporal split,7,1,moving-average,rolling_mean_7,no,,,,12.723717381689518,15.236325500475134,8.82877937382802,,,,Validation only
+B3,forecasting,S12-hw-dataset.csv,42,70/15/15 temporal split,,1,Ridge(alpha=1.0),"lag_1, lag_7, lag_14, rolling_mean_7, rolling_std_7, day_of_week, day_of_month, month",StandardScaler fitted on train only,,,,6.341245180091855,7.935198901390999,4.2456552799841925,,,,Validation only
+R1,forecasting,S12-hw-dataset.csv,42,70/15/15 temporal split,14,1,"GRU(hidden_size=32, num_layers=1)",windowed target only,StandardScaler fitted on train target only,Adam,0.001,30,5.891458988189697,7.532263723188023,3.9629690647125244,6.889394283294678,8.67680479948237,4.4421067237854,"Validation only, best checkpoint saved"
