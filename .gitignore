@@ -56,4 +56,7 @@ logs/
 *.bak
 *.old
 homeworks/**/data/
-
+homeworks/HW13/hw13_outputs/
+.venv/
+.ipynb_checkpoints/
+__pycache__/
